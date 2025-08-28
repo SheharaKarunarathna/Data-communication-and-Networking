@@ -14,4 +14,4 @@ The benefit of having a layered architecture in networking (like the OSI or TCP/
 Baud rate = Number of signal changes per second through a channel of communication.  
 Measured in baud . Each signal change represented from 1 or more bits depending on the modulation  
 * Think of a signal change as a car passing a checkpoint. The number of cars per second is the baud rate, but each car could carry multiple packages (bits).  
-![Alt text](Images/pasted image.png)
+<img width="483" height="301" alt="Pasted image" src="https://github.com/user-attachments/assets/7085fc45-2e34-48ae-9401-80da8621db00" />
