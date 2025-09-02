@@ -9,9 +9,20 @@ The benefit of having a layered architecture in networking (like the OSI or TCP/
 4. Simplified Troubleshooting – Problems can be isolated to a specific layer.
 5. Flexibility – Layers can be updated or replaced independently without affecting the whole system.
 6. Reusability – Common services (e.g., error detection, flow control) can be implemented once and reused across application
-   
+
+## Open System Interconnection architecture  
+* Physical layer-
+* Data link layer-
+* Network layer-
+* Transport layer-
+* Session layer-
+* Presentation layer-
+* Application layer-
+
 ## Baud rate
 Baud rate = Number of signal changes per second through a channel of communication.  
 Measured in baud . Each signal change represented from 1 or more bits depending on the modulation  
 * Think of a signal change as a car passing a checkpoint. The number of cars per second is the baud rate, but each car could carry multiple packages (bits).  
-<img width="483" height="301" alt="Pasted image" src="https://github.com/user-attachments/assets/7085fc45-2e34-48ae-9401-80da8621db00" />
+<img width="483" height="301" alt="Pasted image" src="https://github.com/user-attachments/assets/7085fc45-2e34-48ae-9401-80da8621db00" />  
+Here for a one signal change it needs two bits so,  
+__Baud rate = Bit rate / 2__  
