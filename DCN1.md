@@ -23,6 +23,30 @@ The benefit of having a layered architecture in networking (like the OSI or TCP/
 Baud rate = Number of signal changes per second through a channel of communication.  
 Measured in baud . Each signal change represented from 1 or more bits depending on the modulation  
 * Think of a signal change as a car passing a checkpoint. The number of cars per second is the baud rate, but each car could carry multiple packages (bits).  
-<img width="483" height="301" alt="Pasted image" src="https://github.com/user-attachments/assets/7085fc45-2e34-48ae-9401-80da8621db00" />  
-Here for a one signal change it needs two bits so,  
-__Baud rate = Bit rate / 2__  
+<img width="483" height="301" alt="Pasted image" src="https://github.com/user-attachments/assets/7085fc45-2e34-48ae-9401-80da8621db00" /> <br>
+Here for a one signal change it needs two bits so,  <br>
+__Baud rate = Bit rate / 2__    <br>
+## Data rate <br>
+```
+Data rate = Baud rate * Number of different signal components
+```
+<br>
+Can we keep on increasing the data rate by having more signal components?  <br>
+
+     No there should be a limit. We can get some insights into this from the CODD lectures in the previous semester (logic families , bounds for 0 and 1). We are using specific property within the trasportation medium. If we divide that to higher and higher signal components, we will get bleeding from one signal component to another due to noise and other reasons.
+
+## Sampling <br>
+At the recievers end signals must be sampled and converted to the corresponding bit stream.   
+Sampling should happen at at-least saame rate as the Baud Rate. Otherwise data will get lost.
+
+## Signal-to-Noise Ratio (S/N)  
+* Ratio between Signal power and Noise power
+* Measured in dB
+  ```10lg(S/N)```
+  
+## Nyquist theorem  
+If the highest frequency that the medium can trasmit is f then a reciever is able to completely reconstruct the signal by sampling it at 2*f (if the signal is noiseless)
+
+## Shannon's theorem
+* Maximum data rate of a medium is related not only to the maximum frequency the medium can handle but also to the signal-to-noise ratio:
+  ``` Data rate = bandwidth * log2(1 + S/N)```
