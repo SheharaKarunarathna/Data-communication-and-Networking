@@ -185,8 +185,8 @@ Trade off of Bipase
      Problem it solves: AMI cannot handle 8 consecutive 0s → causes loss of synchronization.
      Solution: Replace 8 consecutive zeros with a special pattern containing two bipolar violations.
      Example substitution: 00000000 → 000VB0VB
-     V = violation (same polarity as previous 1)
-     B = normal bipolar pulse
+     V = violation (same polarity as previously met 1)
+     B = normal bipolar pulse (Opposite polarity as previously met 1)
      ```
 2. HDB3 (High-Density Bipolar 3-Zero)
      ```
@@ -194,5 +194,81 @@ Trade off of Bipase
      Problem it solves: AMI cannot handle 4 consecutive zeros.
      Solution: Replace 4 consecutive zeros with a pattern 000V or B00V depending on number of previous ones to maintain bipolar rules.
      Ensures sufficient transitions for clock recovery.
+     
      ```
+```
+Ex :
+   B8ZS : 1 0 0 0 0 0 0 0 0 1 = + 0 0 0 + − 0 − + 1
+   HDB3 : 1 0 0 0 0 1 0 0 0 0 1 = + 0 0 0 − + 0 0 0 + −
+```
+<img width="967" height="684" alt="image" src="https://github.com/user-attachments/assets/75031269-98a7-40d8-9e1a-4b5d681b9a48" />
 
+
+
+2. Digital data to Analog signal
+   * Amplitude shift keying (ASK)
+   * Frequency shift keying (FSK)
+   * Phase shift keying (PK)
+
+
+1. Amplitude shift keying
+   <img width="550" height="249" alt="image" src="https://github.com/user-attachments/assets/42cb4009-8e1e-4da5-9ad7-7d3bc98a05a0" />
+   * Less used
+   * If a gain happen malware created
+
+2. Binary frequency shift keying
+   * Most common form
+   * Two binary values represented from two freaquencies
+   * Less susceptible to error than ASK
+   * High frequency radio
+   <img width="330" height="145" alt="image" src="https://github.com/user-attachments/assets/f15b94b4-5a52-4f20-a36c-b6362e40696e" />
+    ### Multiple FSK:
+   * More than two frequencies used
+   * More bandwidth efficient
+   * Each signalling element represents more than one bit
+   * Used for duplex voice calls, 4 frequencies for 4 data lines is needed
+ 3.  Binary phase shift keying
+
+   * Phase of carrier signal is shifted to represent data
+   * Binary PSK - Two phases represents two binary digits
+   <img width="286" height="113" alt="image" src="https://github.com/user-attachments/assets/bd1ded72-a641-43f1-aae7-92a780eb29d9" /> <br>
+   * Different PSK -  Phase shifted relative to previous transmission rather
+than some reference signal  
+       ```
+       A ‘1’ is represented by a phase change (e.g., 180°).  
+       A ‘0’ is represented by no phase change.
+       ```
+   <br>  
+   <img width="309" height="139" alt="image" src="https://github.com/user-attachments/assets/666c0707-1340-412c-91ff-5c19309219e4" />
+   
+  4. Quadrature PSK
+More efficient use by each signal element representing more than one bit
+— e.g. shifts of  /2 (90 o
+— Each element represents two bits
+
+
+3. Analog Data to Digital Signal
+
+
+   * PCM - Pulse Code Modulation
+     ```
+     Pulse amplitude modulation (Reading the amplitude) -> Quantization (Rounding off) -> Pulse code modulation (Converting to the bits)
+     ```
+     <img width="930" height="675" alt="image" src="https://github.com/user-attachments/assets/99992a73-ae11-4d45-b9e4-6f8af016c9af" />
+
+Nonlinear Encoding
+    <img width="625" height="342" alt="image" src="https://github.com/user-attachments/assets/b50da618-f952-48de-85f7-a9fa07a04f5a" />
+    * Delta Modulation
+    Analog input is approximated by a staircase
+function.  
+    Move up or down one level () at each sample interval.  
+    <img width="732" height="592" alt="image" src="https://github.com/user-attachments/assets/da4c5351-4ead-486c-9b38-1bcc679733d6" />
+
+     ```
+     If the analog signal is higher than the staircase function, the function moves up by delta. This upward movement is represented by a binary 1.
+     If the analog signal is lower than the staircase function, the function moves down by delta. This downward movement is represented by a binary 0.
+     ```
+   Performance:
+        Good voice reproduction
+        
+     
