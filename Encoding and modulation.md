@@ -270,5 +270,20 @@ function.
      ```
    Performance:
         Good voice reproduction
-        
-     
+        The performance achieved by PCM using 7bits is comparable to delta modulation which use only 1bit. So the bitrate is much lower. Because for every sample, PCM generates 7bit versus delta modulation produces only 1bit.
+
+
+ 4. Analog Data to Analog Signals
+       * Higher frequency can give more efficient transmission
+       * Permits frequency division multiplexing
+ ### Types of Modulation
+ - Amplitude
+ - Frequency
+ - Phase
+
+   *Amplitude Modulation*
+   -  Amplitude of a carrier signal is altered according to information in a message signal
+   -  Frequency of the carrier signal is usually much greater than the highest frequency of the input signal
+    <img width="729" height="560" alt="image" src="https://github.com/user-attachments/assets/2b711851-b0c4-4244-ac65-fc43c646d05e" />
+
+   
