@@ -120,3 +120,29 @@ Repeater function in ring topology
       - Maintains continuous flow → Ensures that data can make a full circle around the ring without degradation.
       - If same data goes through a full circle sender gets the data since it is a waste to send around without a reciever.  
 
+# Star Topology
+
+ Characteristics
+
+    Centralized control → The hub/switch manages all communications.
+    Point-to-point connections → Each device has its own link to the center.
+    Data flow → When a device sends data, it goes to the hub, which forwards it to the intended device.
+
+Advantages
+
+    Easy to install and manage → Problems are easier to detect.
+    Easy to expand → Add a new device by connecting it to the hub.
+    Failure isolation → If one device fails, it doesn’t affect others.
+
+Disadvantages
+
+    Central point of failure → If the hub/switch fails, the whole network goes down.
+    Higher cabling cost → Each device needs its own cable.
+    Limited by hub capacity → The number of devices depends on hub ports.
+
+✅ Use cases:
+
+    Home networks
+    Small office networks
+    Modern Ethernet LANs
+**The data transfered has a header it says where to transfer data to the central node it transfers data to that specific node. Any two stages must communicate through the central stage.**
